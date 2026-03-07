@@ -2,202 +2,164 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Fashion Trend 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashion Hub</title>
 
 <style>
-
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
-/* HEADER */
-
+/* Header */
 header{
-    background:black;
+    background:#111;
     color:white;
+    padding:15px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 40px;
 }
 
 .logo{
-    font-size:28px;
+    font-size:24px;
     font-weight:bold;
-    color:gold;
 }
 
-.contact{
-    font-size:16px;
-}
-
-/* NAVIGATION */
-
-nav{
-    background:#333;
-    text-align:center;
-    padding:12px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
-}
-
-nav a:hover{
-    color:gold;
-}
-
-/* MAIN */
-
-.container{
-    width:90%;
-    margin:auto;
-    padding:30px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-/* GALLERY */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+/* Menu */
+nav ul{
+    list-style:none;
+    display:flex;
     gap:20px;
 }
 
-.card{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+}
+
+nav ul li a:hover{
+    color:#ff4081;
+}
+
+/* Banner */
+.banner{
+    background:url("https://images.unsplash.com/photo-1445205170230-053b83016050") center/cover;
+    height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* Featured Section */
+.featured{
+    padding:40px;
+    text-align:center;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.product{
+    border:1px solid #ddd;
+    padding:15px;
+    width:200px;
     transition:0.3s;
 }
 
-.card:hover{
+.product:hover{
     transform:scale(1.05);
 }
 
-.card img{
+.product img{
     width:100%;
-    height:300px;
-    object-fit:cover;
 }
 
-.card h3{
-    text-align:center;
-    padding:10px;
+.product h3{
+    margin:10px 0;
 }
 
-/* CONTACT SECTION */
-
-.contact-section{
-    background:white;
-    margin-top:40px;
-    padding:30px;
-    text-align:center;
-    border-radius:10px;
+.price{
+    color:#ff4081;
+    font-weight:bold;
 }
 
+/* Footer */
 footer{
-    background:black;
+    background:#111;
     color:white;
     text-align:center;
     padding:15px;
     margin-top:30px;
 }
-
 </style>
 </head>
 
 <body>
 
+<!-- Header -->
 <header>
-
-<div class="logo">FASHION STYLE</div>
-
-<div class="contact">
-📞 Contact: +977 9800000000
-</div>
-
-</header>
+<div class="logo">Fashion Hub</div>
 
 <nav>
-
-<a href="#">Home</a>
-<a href="#">Boys Fashion</a>
-<a href="#">Girls Fashion</a>
-<a href="#">Contact</a>
-
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Shop</a></li>
+<li><a href="#">Boys</a></li>
+<li><a href="#">Girls</a></li>
+</ul>
 </nav>
+</header>
 
-<div class="container">
+<!-- Banner -->
+<section class="banner">
+New Fashion Collection
+</section>
 
-<h2 class="section-title">Girls Trending Dresses</h2>
+<!-- Featured Products -->
+<section class="featured">
+<h2>Featured Products</h2>
 
-<div class="gallery">
+<div class="products">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-<h3>Elegant Party Dress</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
-<h3>Floral Summer Dress</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
-<h3>Modern Street Fashion</h3>
-</div>
-
-</div>
-
-<h2 class="section-title">Boys Trending Dresses</h2>
-
-<div class="gallery">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
-<h3>Casual Street Style</h3>
-</div>
-
-<div class="card">
+<div class="product">
 <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-<h3>Modern Suit Fashion</h3>
+<h3>Boys Jacket</h3>
+<p class="price">$25</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d">
-<h3>Summer Casual Look</h3>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975922284-9e0ce82759c8">
+<h3>Girls Dress</h3>
+<p class="price">$30</p>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<h3>Boys T-Shirt</h3>
+<p class="price">$18</p>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93">
+<h3>Girls Fashion Top</h3>
+<p class="price">$22</p>
 </div>
 
 </div>
+</section>
 
-<div class="contact-section">
-
-<h2>Contact Us</h2>
-
-<p>📍 Location: Butwal, Nepal</p>
-<p>📞 Phone: +977 9800000000</p>
-<p>📧 Email: fashionstyle@gmail.com</p>
-
-</div>
-
-</div>
-
+<!-- Footer -->
 <footer>
-
-<p>© 2026 Fashion Style | All Rights Reserved</p>
-
+<p>© 2026 Fashion Hub | All Rights Reserved</p>
 </footer>
 
 </body>
