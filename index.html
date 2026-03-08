@@ -2,134 +2,136 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Fashion Trend Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UrbanTrend Fashion Store</title>
+
 <style>
+
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f5f5f5;
-}
-header{
-    background:black;
-    color:white;
-    padding:15px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#ff4081;
-}
-nav a{
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-size:18px;
-}
-nav a:hover{
-    color:#ff4081;
-}
-.banner{
-    height:300px;
-    background:url("https://images.unsplash.com/photo-1521334884684-d80222895322") center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:40px;
-    font-weight:bold;
-}
-.section-title{
-    text-align:center;
-    margin:40px;
-    font-size:32px;
-}
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    padding:20px;
-}
-.product{
-    background:white;
-    padding:10px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.2);
-    text-align:center;
-}
-.product img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:10px;
-}
-.product h3{
-    margin:10px 0;
-}
-.price{
-    color:#ff4081;
-    font-weight:bold;
-}
-button{
-    background:#ff4081;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    cursor:pointer;
-    border-radius:5px;
-    margin-top:10px;
-}
-button:hover{
-    background:black;
-}
-.contact{
-    background:black;
-    color:white;
-    padding:30px;
-    text-align:center;
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
 }
 
-/* Modal for Payment */
-.modal{
-    display:none;
-    position:fixed;
-    z-index:1000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-    justify-content:center;
-    align-items:center;
+/* Header */
+
+header{
+background:black;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
 }
-.modal-content{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    max-width:400px;
-    width:90%;
-    text-align:center;
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#ff4d6d;
 }
-.close{
-    float:right;
-    font-size:24px;
-    cursor:pointer;
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
 }
-input{
-    padding:10px;
-    width:90%;
-    margin:10px 0;
-    border-radius:5px;
-    border:1px solid #ccc;
+
+nav a:hover{
+color:#ff4d6d;
 }
+
+/* Banner */
+
+.banner{
+height:350px;
+background:url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:40px;
+font-weight:bold;
+}
+
+/* Products */
+
+.products{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.product{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-8px);
+}
+
+.product img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.product h3{
+margin:10px 0;
+}
+
+.price{
+color:#ff4d6d;
+font-weight:bold;
+}
+
+/* Buttons */
+
+button{
+border:none;
+padding:10px 15px;
+margin:5px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.cart{
+background:#ff4d6d;
+color:white;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+/* Footer */
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">FashionTrend</div>
+<div class="logo">UrbanTrend</div>
+
 <nav>
 <a href="#">Home</a>
 <a href="#">Shop</a>
@@ -139,172 +141,150 @@ input{
 </nav>
 </header>
 
-<div class="banner">New Fashion Collection</div>
-
-<h2 class="section-title">Trending Clothes</h2>
-
-<div class="products">
-
-<!-- 20 Unique Clothes -->
-
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c" alt="Street Hoodie">
-<h3>Street Hoodie</h3>
-<p class="price">$35</p>
-<button onclick="addToCart('Street Hoodie',35)">Add to Cart</button>
+<div class="banner">
+New Trend Fashion
 </div>
 
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Denim Jacket">
+<section class="products">
+
+<!-- 1 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<h3>Oversized T-Shirt</h3>
+<p class="price">$20</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 2 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1593032465171-8c7a54f7f1d2">
 <h3>Denim Jacket</h3>
 <p class="price">$45</p>
-<button onclick="addToCart('Denim Jacket',45)">Add to Cart</button>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Casual T-Shirt">
-<h3>Casual T-Shirt</h3>
-<p class="price">$20</p>
-<button onclick="addToCart('Casual T-Shirt',20)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Stylish Jeans">
-<h3>Stylish Jeans</h3>
-<p class="price">$40</p>
-<button onclick="addToCart('Stylish Jeans',40)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59" alt="Sports Jacket">
-<h3>Sports Jacket</h3>
-<p class="price">$50</p>
-<button onclick="addToCart('Sports Jacket',50)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1495121605193-b116b5b09a23" alt="Floral Dress">
-<h3>Floral Summer Dress</h3>
-<p class="price">$38</p>
-<button onclick="addToCart('Floral Summer Dress',38)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1520975918318-6a9c7f6b9e6c" alt="Crop Top">
-<h3>Stylish Crop Top</h3>
-<p class="price">$22</p>
-<button onclick="addToCart('Stylish Crop Top',22)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" alt="Elegant Gown">
-<h3>Elegant Gown</h3>
-<p class="price">$80</p>
-<button onclick="addToCart('Elegant Gown',80)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1520975867597-0af37a22a6b7" alt="Denim Jacket Girls">
-<h3>Denim Jacket Girls</h3>
-<p class="price">$42</p>
-<button onclick="addToCart('Denim Jacket Girls',42)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d" alt="Trendy Fashion Top">
-<h3>Trendy Fashion Top</h3>
-<p class="price">$26</p>
-<button onclick="addToCart('Trendy Fashion Top',26)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1520975922071-8f0b6f9c2b9d" alt="Party Dress">
-<h3>Party Dress</h3>
-<p class="price">$65</p>
-<button onclick="addToCart('Party Dress',65)">Add to Cart</button>
-</div>
-
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Plaid Shirt">
-<h3>Plaid Shirt</h3>
+<!-- 3 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
+<h3>Casual Shirt</h3>
 <p class="price">$30</p>
-<button onclick="addToCart('Plaid Shirt',30)">Add to Cart</button>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Denim Shorts">
-<h3>Denim Shorts</h3>
+<!-- 4 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+<h3>Black Pants</h3>
+<p class="price">$35</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 5 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<h3>One Piece Dress</h3>
+<p class="price">$50</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 6 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975922323-38b8d3b1a9b4">
+<h3>Mini Skirt</h3>
+<p class="price">$28</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 7 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1583005515910-1d9c9a6c2f96">
+<h3>Summer Shorts</h3>
+<p class="price">$22</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 8 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520974735194-1c2bba7c0a52">
+<h3>Formal Coat</h3>
+<p class="price">$70</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 9 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9">
+<h3>Graphic T-Shirt</h3>
+<p class="price">$18</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 10 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<h3>Stylish Hoodie</h3>
+<p class="price">$40</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
+</div>
+
+<!-- 11 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae">
+<h3>Girls Crop Top</h3>
 <p class="price">$25</p>
-<button onclick="addToCart('Denim Shorts',25)">Add to Cart</button>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1520975922203-b9c1c8e6b67f" alt="Luxury Dress">
-<h3>Luxury Designer Dress</h3>
-<p class="price">$120</p>
-<button onclick="addToCart('Luxury Designer Dress',120)">Add to Cart</button>
+<!-- 12 -->
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070">
+<h3>Denim Jeans</h3>
+<p class="price">$38</p>
+<button class="cart">Add to Cart</button>
+<a href="https://wa.me/9779800000000">
+<button class="whatsapp">WhatsApp</button>
+</a>
 </div>
 
-<div class="product" data-category="girls">
-<img src="https://images.unsplash.com/photo-1520975922071-8f0b6f9c2b9d" alt="Evening Dress">
-<h3>Evening Dress</h3>
-<p class="price">$95</p>
-<button onclick="addToCart('Evening Dress',95)">Add to Cart</button>
-</div>
+</section>
 
-<div class="product" data-category="boys">
-<img src="https://images.unsplash.com/photo-1520974735194-5f6a6f4b7b60" alt="Winter Coat Boys">
-<h3>Winter Coat Boys</h3>
-<p class="price">$85</p>
-<button onclick="addToCart('Winter Coat Boys',85)">Add to Cart</button>
-</div>
-
-</div>
-
-<div class="contact">
-<h2>Contact Us</h2>
-<p>FashionTrend Store</p>
-<p>Phone: +977 9800000000</p>
-<p>Email: fashiontrend@gmail.com</p>
-</div>
-
-<!-- Payment Modal -->
-<div class="modal" id="paymentModal">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">&times;</span>
-<h2>Checkout</h2>
-<p>Total Amount: $<span id="totalAmount">0</span></p>
-<input type="text" placeholder="Card Number">
-<input type="text" placeholder="Name on Card">
-<input type="text" placeholder="Expiry MM/YY">
-<input type="text" placeholder="CVV">
-<br>
-<button onclick="payNow()">Pay Now</button>
-</div>
-</div>
-
-<script>
-let cart = [];
-function addToCart(name, price){
-    cart.push({name, price});
-    alert(name + " added to cart! Total items: "+cart.length);
-    showPaymentModal();
-}
-
-function showPaymentModal(){
-    let total = cart.reduce((sum, item)=>sum+item.price,0);
-    document.getElementById('totalAmount').innerText = total;
-    document.getElementById('paymentModal').style.display='flex';
-}
-function closeModal(){
-    document.getElementById('paymentModal').style.display='none';
-}
-function payNow(){
-    alert("Payment Successful! Thank you for shopping.");
-    cart = [];
-    closeModal();
-}
-</script>
+<footer>
+<p>UrbanTrend Fashion Store</p>
+<p>WhatsApp Order: +977 9800000000</p>
+</footer>
 
 </body>
 </html>
